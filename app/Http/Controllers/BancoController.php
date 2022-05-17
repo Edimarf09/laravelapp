@@ -41,8 +41,8 @@ class BancoController extends Controller
             'numero' => 'required',
             'ispb' => 'required|size:3',
         ]);
-        $input = $request->all();
-        Banco::create($input);
+        $validatedData = $request->all();
+        Banco::create($validatedData);
         return redirect('banco')->with('flash_message', 'Banco Adicionado!');
     }
 
@@ -85,8 +85,8 @@ class BancoController extends Controller
             'ispb' => 'required|size:3',
         ]);
         $banco = Banco::find($id);
-        $input = $request->all();
-        $banco->update($input);
+        $validatedData = $request->all();
+        $banco->update($validatedData);
         return redirect('banco')->with('flash_message', 'Banco Atualizado!');
     }
 

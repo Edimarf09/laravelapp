@@ -1,7 +1,7 @@
 @extends('bancos.layout')
 @section('content')
 <div class="card">
-    <div class="card-header">Pagina Bancos</div>
+    <div class="card-header">Banco - {{$bancos->nome}}</div>
     <div class="card-body">
         <div class="card-body">
             <h5 class="card-title">Nome : {{ $bancos->nome }}</h5>

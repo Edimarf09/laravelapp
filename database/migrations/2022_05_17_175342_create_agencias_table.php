@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('agencias', function (Blueprint $table) {
             $table->id();
             $table->foreignId('banco_id')->references('id')->on('banco');
+            //$table->foreignIdFor(Banco::class);
             $table->string('endereco');
             $table->bigInteger('fone_movel');
             $table->bigInteger('fone_fixo');

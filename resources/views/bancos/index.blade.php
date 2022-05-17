@@ -32,11 +32,9 @@
                                     <td>{{ $item->nome }}</td>
                                     <td>{{ $item->numero }}</td>
                                     <td>{{ $item->ispb }}</td>
-
                                     <td>
-                                        <a href="{{ url('/banco/' . $item->id) }}" title="Ver Banco"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Ver</button></a>
+                                        <a href="{{ url('/banco/' . $item->id) }}" title="Ver {{ $item->nome }}"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Ver</button></a>
                                         <a href="{{ url('/banco/' . $item->id . '/edit') }}" title="Editar Banco"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Editar</button></a>
-
                                         <form method="POST" action="{{ url('/banco' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
@@ -48,7 +46,6 @@
                             </tbody>
                         </table>
                     </div>
-
                 </div>
             </div>
         </div>
