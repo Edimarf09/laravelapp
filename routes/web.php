@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BancoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('banco/{banco}', function(\App\Models\Banco $banco) {
-    return $banco;
-});
+Route::resource("/banco", BancoController::class);

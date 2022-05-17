@@ -9,9 +9,7 @@ class Banco extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nome',
-        'numero',
-        'ispb',
-    ];
+    protected $table = 'bancos';
+    protected $primaryKey = 'id';
+    protected $fillable = ['nome','numero','ispb'];
 }
