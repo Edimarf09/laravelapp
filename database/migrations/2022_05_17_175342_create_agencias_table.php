@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('agencias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('banco_id')->references('id')->on('banco');
-            //$table->foreignIdFor(Banco::class);
+            $table->foreignId('banco_id')->references('id')->on('bancos');
             $table->string('endereco');
-            $table->bigInteger('fone_movel');
-            $table->bigInteger('fone_fixo');
+            $table->bigInteger('fone1');
+            $table->integer('tipo1');
+            $table->bigInteger('fone2');
+            $table->integer('tipo2');
             $table->string('agencia');
             $table->string('nome_agencia');
             $table->timestamps();

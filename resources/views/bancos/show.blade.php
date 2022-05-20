@@ -1,4 +1,4 @@
-@extends('bancos.layout')
+@extends('scaffolds.basic')
 @section('content')
 <div class="card">
     <div class="card-header">Banco - {{$bancos->nome}}</div>

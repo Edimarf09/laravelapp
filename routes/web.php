@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgenciaController;
 use App\Http\Controllers\BancoController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::resource("/banco", BancoController::class);
+
+Route::resource("/agencia", AgenciaController::class);
